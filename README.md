@@ -7,7 +7,7 @@ Connection pooler for PostgreSQL with Docker Secrets support.
 ```yaml
 services:
   pgbouncer:
-    image: git.blackbox.ms:4567/blackbox-tooling/baseimages/pgbouncer:1.23
+    image: ghcr.io/blackbox-innovation/pgbouncer:1.23
     environment:
       POSTGRESQL_HOST: postgres
       POSTGRESQL_PASSWORD: secret
@@ -22,7 +22,7 @@ Use `_FILE` suffix to read values from mounted secrets:
 ```yaml
 services:
   pgbouncer:
-    image: git.blackbox.ms:4567/blackbox-tooling/baseimages/pgbouncer:1.23
+    image: ghcr.io/blackbox-innovation/pgbouncer:1.23
     environment:
       POSTGRESQL_HOST_FILE: /run/secrets/pg_host
       POSTGRESQL_PORT_FILE: /run/secrets/pg_port
@@ -167,7 +167,7 @@ volumes:
 ```yaml
 services:
   pgbouncer:
-    image: git.blackbox.ms:4567/blackbox-tooling/baseimages/pgbouncer:1.23
+    image: ghcr.io/blackbox-innovation/pgbouncer:1.23
     environment:
       POSTGRESQL_HOST: postgres
       POSTGRESQL_PASSWORD: secret
